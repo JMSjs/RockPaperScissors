@@ -23,19 +23,19 @@ function getComputerChoice() {
 function playRound() {
     let computerSelection = getComputerChoice();
     let playerSelection = prompt("Choose rock, paper, or scissors");
-    if (playerSelection.toLowerCase() == "rock" 
-        || playerSelection.toLowerCase() == "paper" 
-        || playerSelection.toLowerCase() == "scissors") {
-            return (evaluateRound(playerSelection, computerSelection));
-    } else {
-        playerSelection = prompt("Invalid selection. Choose rock, paper, or scissors");
+    while (playerSelection.toLowerCase() !== "rock" 
+        && playerSelection.toLowerCase() !== "paper" 
+        && playerSelection.toLowerCase() !== "scissors") {
+            playerSelection = prompt("Invalid selection. Choose rock, paper, or scissors");
     }
+    return (evaluateRound(playerSelection, computerSelection));
+
 }
 
 // this function executes an entire game
 function game() {
     for (i = 1; i <= 5; i++) {
-        console.log();
+        console.log(" ");
         console.log(`******* Round [${i}] out of [5] *******`)
         console.log(playRound());
     }
@@ -62,17 +62,17 @@ function playerLose(yourString, cpuString){
 //this function executes to determine and declare the final winner after a game is finished
 function whoWon() {
     if (roundWins === roundLosses) {
-        console.log();
+        console.log("");
         console.log("========================================");
         console.log("FINAL RESULT....game was a tie");
         console.log("========================================");
     } else if (roundWins > roundLosses) {
-        console.log();
+        console.log("");
         console.log("========================================");
         console.log(`FINAL RESULT....YOU WIN [${roundWins}] to [${roundLosses}]!!`);
         console.log("========================================");
     } else {
-    console.log();
+    console.log("");
     console.log("========================================");
     console.log(`FINAL RESULT....You lost [${roundWins}] to [${roundLosses}].`);
     console.log("========================================");
