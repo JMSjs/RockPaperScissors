@@ -72,10 +72,10 @@ function whoWon() {
         console.log(`FINAL RESULT....YOU WIN [${roundWins}] to [${roundLosses}]!!`);
         console.log("========================================");
     } else {
-    console.log("");
-    console.log("========================================");
-    console.log(`FINAL RESULT....You lost [${roundWins}] to [${roundLosses}].`);
-    console.log("========================================");
+        console.log("");
+        console.log("========================================");
+        console.log(`FINAL RESULT....You lost [${roundWins}] to [${roundLosses}].`);
+        console.log("========================================");
     }
 }
 
