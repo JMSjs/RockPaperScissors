@@ -5,10 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" type="text/css"> 
-    <title>Document</title>
+    <title>Rock Paper Scissors App</title>
 </head>
 <body>
+    <div class="numRounds">
+        <h2>Total Rounds of Rock Paper Scissors: <span id="numRounds">3</span></h2>
+        <button class="qty" id="decrementRound">-1 round</button>
+        <button class="qty" id="incrementRound">+1 round</button>
+    </div>
+
+    <div class="mainDisplay">
+        <h2>Round <span id="currRound">1</span>. Choose your hand:</h2>
+        <div class="buttons">
+            <button class="choice" id="rock">ROCK</button>
+            <button class="choice" id="paper">PAPER</button>
+            <button class="choice" id="scissors">SCISSORS</button>
+        </div>
+    </div>
+
+    <div class="scoreboard">
+        <h2>YOUR SCORE: <span id="roundWins">0</span></h2>
+        <h2>CPU SCORE: <span id="roundLosses">0</span></h2>
+    </div>
     
+    <div class="textLog">
+        <p>text log:</p>
+    </div>
+
     <script src="app.js"></script>
 </body>
 </html>

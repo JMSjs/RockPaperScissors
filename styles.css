@@ -1,5 +1,53 @@
-body{
+body {
     margin: 0px;
-    padding; 0px;
+    padding: 0px;
 }
 
+button {
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #2c2c2c;
+    border-radius: 75px;
+    width: 200px;
+    height: 50px;
+
+}
+
+.buttons {
+    width: 800px;
+    height: 200px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainDisplay {
+    margin-top: 20px;
+    background-color: rgb(223, 255, 214);
+    text-align: center;
+    border-radius: 100px;
+}
+
+.numRounds {
+    text-align: center;
+}
+
+.qty {
+    margin: 5px;
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    display: inline;
+}
+
+#decrementRound {
+    background-color: lightgray;
+}
+
+#incrementRound {
+    background-color: darkgrey;
+}
+.scoreboard {
+    margin-left: 50px;
+}

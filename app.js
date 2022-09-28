@@ -1,7 +1,9 @@
 let roundWins = 0;
 let roundLosses = 0;
-
-game();
+// let rock = document.querySelector('#rock');
+// let paper = document.querySelector('#paper');
+// let scissors = document.querySelector('#scissors');
+let buttons = document.querySelectorAll('.buttons');
 
 // this function creates a random hand for the computer
 function getComputerChoice() {
@@ -15,21 +17,16 @@ function getComputerChoice() {
         case 2:  computerChoice = "scissors";
             break;
     }
-    console.log("The computer is ready...make your choice.")
     return computerChoice;
 }
 
 // this function executes 1 complete round of R.P.S.
 function playRound() {
-    let computerSelection = getComputerChoice();
-    let playerSelection = prompt("Choose rock, paper, or scissors");
-    while (playerSelection.toLowerCase() !== "rock" 
-        && playerSelection.toLowerCase() !== "paper" 
-        && playerSelection.toLowerCase() !== "scissors") {
-            playerSelection = prompt("Invalid selection. Choose rock, paper, or scissors");
-    }
-    return (evaluateRound(playerSelection, computerSelection));
-
+    buttons.forEach(button => button.addEventListener('click' , function(e) {
+        let playerSelection = e.target.id;
+        let computerSelection = getComputerChoice();
+        evaluateRound(playerSelection, computerSelection);
+    }));
 }
 
 // this function executes an entire game
@@ -106,3 +103,5 @@ function evaluateRound(yourString, cpuString) {
         }
     }
 }
+
+game();
